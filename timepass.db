@@ -1,0 +1,13 @@
+ declare
+user varchar2(20) := '&user';
+begin
+case user
+when'SYS' then dbms_output.put_line('The owner is SYS');
+when'SYSTEM' then dbms_output.put_line('The owner is SYSTEM');
+when'HR' then dbms_output.put_line('The owner is HR');
+when'SCOTT' then dbms_output.put_line('The owner is SCOTT');
+else
+dbms_output.put_line(INVALID CHOICE');
+end case;
+end;
+/
